@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----------------------------------------------------------------------------
+   Grafema — design tokens
+   Palette derived from offset-printing / registration marks (CMYK proofing).
+   Tokens are CSS vars so the .dark class can swap ink<->paper cleanly.
+---------------------------------------------------------------------------- */
+:root {
+  --paper: #fcfcfa;
+  --ink: #141414;
+  --grid: #dbdbd6;
+  --muted: #6b6b66;
+
+  --vermilion: #f23005; /* signature accent — registration red */
+  --proof-blue: #1f4fff;
+  --proof-yellow: #ffd400;
+
+  --nav-height: 69px;
+  --size-padding-global: 1.875rem; /* 30px */
+  --size-gap: 1.25rem; /* 20px */
+}
+
+.dark {
+  --paper: #141414;
+  --ink: #fcfcfa;
+  --grid: #2a2a2a;
+  --muted: #9a9a93;
+  /* accents stay identical — they pop on both grounds */
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--vermilion);
+  color: var(--paper);
+}
+
+/* Display serif is set tight + high-contrast, as a foundry hero should be */
+.font-display {
+  letter-spacing: -0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

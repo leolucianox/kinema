@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Início",
+    "typefaces": "Tipos",
+    "foundry": "Fundição",
+    "journal": "Diário",
+    "inUse": "Em uso",
+    "tryIt": "Experimentar",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "toggleTheme": "Alternar tema",
+    "language": "Idioma"
+  },
+  "home": {
+    "heroKicker": "Fundição tipográfica independente",
+    "heroLine1": "Letras",
+    "heroLine2": "com intenção.",
+    "heroBody": "Desenhamos famílias tipográficas contemporâneas para marcas, editoriais e telas. Uma coleção pequena, feita para durar.",
+    "heroCta": "Ver os tipos",
+    "manifestoKicker": "Manifesto",
+    "manifestoTitle1": "Cada forma carrega",
+    "manifestoTitle2": "uma decisão.",
+    "principle1Label": "Contraste deliberado",
+    "principle1Body": "Do traço fino ao cheio, cada eixo é desenhado para render em corpo grande e pequeno sem perder a voz.",
+    "principle2Label": "Sistema, não capricho",
+    "principle2Body": "Pesos, larguras e itálicos conversam entre si. Uma família é uma malha coerente, não peças avulsas.",
+    "principle3Label": "Feito para a tela",
+    "principle3Body": "Ajuste fino de hinting e métricas para que o texto respire em qualquer densidade de pixel.",
+    "spotlightKicker": "Em destaque",
+    "spotlightCta": "Abrir specimen",
+    "tryKicker": "Teste ao vivo",
+    "tryTitle": "Digite. Ajuste. Sinta.",
+    "tryBody": "Experimente qualquer tipo da coleção direto no navegador — peso, tamanho, espaçamento.",
+    "tryPlaceholder": "Escreva algo aqui",
+    "ctaTitle1": "Licencie a coleção",
+    "ctaTitle2": "completa.",
+    "ctaBody": "Uma licença, todas as famílias, atualizações vitalícias.",
+    "ctaButton": "Falar com a fundição"
+  },
+  "typefaces": {
+    "title": "A coleção",
+    "subtitle": "Famílias desenhadas e mantidas pela Grafema.",
+    "styles": "{count} estilos",
+    "view": "Ver specimen"
+  },
+  "specimen": {
+    "back": "Voltar à coleção",
+    "designer": "Designer",
+    "released": "Lançamento",
+    "styles": "Estilos",
+    "formats": "Formatos",
+    "license": "Licenciar",
+    "testerTitle": "Teste ao vivo",
+    "size": "Tamanho",
+    "weight": "Peso",
+    "tracking": "Entreletra",
+    "leading": "Entrelinha",
+    "alignment": "Alinhamento",
+    "case": "Caixa",
+    "ligatures": "Ligaduras",
+    "glyphsTitle": "Conjunto de glifos",
+    "waterfallTitle": "Cascata",
+    "resetText": "Restaurar texto"
+  },
+  "foundry": {
+    "title1": "Uma fundição",
+    "title2": "do tamanho certo.",
+    "body": "A Grafema é um estúdio independente dedicado ao desenho de tipos. Trabalhamos devagar, em poucas famílias por ano, com obsessão por detalhe.",
+    "teamTitle": "Quem desenha"
+  },
+  "journal": {
+    "title": "Diário",
+    "subtitle": "Notas sobre tipos, processo e o ofício.",
+    "readMore": "Ler",
+    "by": "por",
+    "backToJournal": "Voltar ao diário"
+  },
+  "footer": {
+    "tagline": "Fundição tipográfica independente.",
+    "newsletterTitle": "Receba novos lançamentos",
+    "newsletterPlaceholder": "seu@email.com",
+    "subscribe": "Assinar",
+    "rights": "Todos os direitos reservados.",
+    "columnsExplore": "Explorar",
+    "columnsFoundry": "Fundição",
+    "columnsLegal": "Legal"
+  }
+}
