@@ -4,7 +4,6 @@ import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 
-// Switches between the two locales while preserving the current path.
 export function LocaleSwitch() {
   const locale = useLocale();
   const pathname = usePathname();
@@ -13,7 +12,7 @@ export function LocaleSwitch() {
 
   return (
     <div
-      className="flex h-9 items-center border border-grid bg-paper font-mono text-xs"
+      className="flex h-8 items-center overflow-hidden rounded-full border border-edge font-mono text-xs"
       aria-label={t("language")}
     >
       {routing.locales.map((loc) => {
@@ -24,8 +23,8 @@ export function LocaleSwitch() {
             type="button"
             onClick={() => router.replace(pathname, { locale: loc })}
             aria-current={active ? "true" : undefined}
-            className={`h-full px-2.5 uppercase transition-colors ${
-              active ? "bg-ink text-paper" : "text-muted hover:text-ink"
+            className={`h-full px-3 uppercase transition-colors ${
+              active ? "bg-spark text-void" : "text-dim hover:text-light"
             }`}
           >
             {loc}

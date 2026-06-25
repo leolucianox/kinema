@@ -5,7 +5,6 @@ import { useTheme } from "next-themes";
 import { Sun, Moon } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-// Light/dark toggle. Guarded against hydration mismatch with a mounted flag.
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -20,9 +19,9 @@ export function ThemeToggle() {
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={t("toggleTheme")}
-      className="flex h-9 w-9 items-center justify-center border border-grid bg-paper text-ink transition-colors hover:border-ink"
+      className="flex h-8 w-8 items-center justify-center rounded-full border border-edge text-light transition-colors hover:border-spark hover:text-spark"
     >
-      {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+      {isDark ? <Sun className="h-3.5 w-3.5" /> : <Moon className="h-3.5 w-3.5" />}
     </button>
   );
 }

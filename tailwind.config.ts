@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: "class",
+  darkMode: ["class", ".dark, :root:not(.light)"],
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -11,29 +11,33 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // tokens — resolve to CSS vars so dark mode swaps automatically
-        paper: "var(--paper)",
-        ink: "var(--ink)",
-        grid: "var(--grid)",
-        muted: "var(--muted)",
-        vermilion: "var(--vermilion)",
-        "proof-blue": "var(--proof-blue)",
-        "proof-yellow": "var(--proof-yellow)",
+        void: "var(--void)",
+        light: "var(--light)",
+        surface: "var(--surface)",
+        edge: "var(--edge)",
+        dim: "var(--dim)",
+        spark: "var(--spark)",
+        volt: "var(--volt)",
+        glow: "var(--glow)",
       },
       fontFamily: {
-        // grotesque UI (≈ Space Grotesk), display serif (Fraunces, variable),
-        // and mono for specimen specs (JetBrains Mono)
-        sans: ["var(--font-grotesk)", "Arial", "sans-serif"],
-        display: ["var(--font-fraunces)", "Georgia", "serif"],
+        sans: ["var(--font-dm-sans)", "Arial", "sans-serif"],
+        display: ["var(--font-syne)", "Arial", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
+      borderRadius: {
+        DEFAULT: "var(--radius)",
+        sm: "var(--radius-sm)",
+        xl: "1rem",
+        "2xl": "1.5rem",
+      },
       letterSpacing: {
-        tightest: "-0.02em",
+        tightest: "-0.03em",
         body: "-0.01em",
       },
       spacing: {
-        global: "1.875rem", // 30px padding-global
-        rect: "2.5rem", // 40px grid square
+        global: "1.875rem",
+        rect: "2.5rem",
         nav: "69px",
       },
       maxWidth: {

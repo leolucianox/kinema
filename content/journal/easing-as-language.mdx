@@ -1,0 +1,38 @@
+---
+title: "Easing as language: what your curves are saying"
+date: "2025-03-18"
+author: "Lucas Verne"
+excerpt: "The choice between linear and exponential easing is not aesthetic. It is the difference between a mechanic and a story."
+---
+
+We spend a lot of time choosing colors, typefaces, and grid systems. We obsess over padding values and hover states. But there is one design decision that most people make once, early, and never revisit: easing.
+
+That is a mistake. Easing is language.
+
+## Linear is a lie
+
+When something moves at a constant speed from point A to point B, it does not feel digital — it feels robotic. Nothing in the physical world moves linearly. A ball thrown through the air decelerates. A door opens fast and slows near the end. A card sliding off a table accelerates as it falls.
+
+Linear easing breaks the implicit contract between the interface and the person using it. The user's brain expects deceleration. When it doesn't arrive, something feels slightly wrong. They may not be able to name it. They will feel it.
+
+## Expo is the default, not a style
+
+Exponential easing — fast start, graceful deceleration — is not a "dynamic" aesthetic choice. It is the baseline for motion that feels right. The question is how much expo, not whether expo.
+
+A tight expo curve (`[0.87, 0, 0.13, 1]`) feels snappy and confident. A looser one (`[0.76, 0, 0.24, 1]`) feels deliberate and calm. Same shape, different tempo, completely different emotional register.
+
+## Spring is not bounce
+
+There is a common misconception that spring physics means bouncy animations. It does not. Spring easing is about responsiveness — the feeling that something reacts immediately to input and settles naturally. Zero bounce, full spring. It is the easing of things that feel alive.
+
+Bounce is a specific value within spring — `bounce: 0.5` or higher. Use it sparingly. When everything bounces, nothing does.
+
+## The practical rule
+
+Match your easing to the direction of motion:
+
+- **Entering the screen**: decelerate (expo-out, spring). The element arrives and lands.
+- **Leaving the screen**: accelerate (expo-in). It goes and doesn't look back.
+- **Both directions** (a modal that opens and closes): different curves for each direction.
+
+Easing is not polish. It is the personality of your product in motion.

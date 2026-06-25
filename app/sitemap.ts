@@ -1,19 +1,18 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
-import { typefaces } from "@/lib/typefaces";
+import { kits } from "@/lib/kits";
 import { getAllPosts } from "@/lib/journal";
 
-// Replace with the production origin once deployed.
-const BASE = "https://grafema.vercel.app";
+const BASE = "https://kinema.studio";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     "",
-    "/typefaces",
-    "/foundry",
+    "/kits",
+    "/studio",
     "/journal",
-    "/in-use",
-    ...typefaces.map((t) => `/typefaces/${t.slug}`),
+    "/work",
+    ...kits.map((k) => `/kits/${k.slug}`),
     ...getAllPosts().map((p) => `/journal/${p.slug}`),
   ];
 

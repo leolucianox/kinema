@@ -1,11 +1,11 @@
 import { setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/sections/hero";
-import { Manifesto } from "@/components/sections/manifesto";
+import { TryPlayground } from "@/components/sections/try-playground";
 import { CollectionHome } from "@/components/sections/collection-home";
 import { Spotlight } from "@/components/sections/spotlight";
-import { TryTester } from "@/components/sections/try-tester";
-import { InUseMarquee } from "@/components/sections/in-use-marquee";
-import { LicenseCta } from "@/components/sections/license-cta";
+import { Manifesto } from "@/components/sections/manifesto";
+import { WorkMarquee } from "@/components/sections/work-marquee";
+import { ContactCta } from "@/components/sections/contact-cta";
 
 export default async function Home({
   params,
@@ -18,12 +18,12 @@ export default async function Home({
   return (
     <main className="w-full">
       <Hero />
-      <Manifesto />
+      <TryPlayground />
       <CollectionHome />
       <Spotlight />
-      <TryTester />
-      <InUseMarquee />
-      <LicenseCta />
+      <Manifesto />
+      <WorkMarquee />
+      <ContactCta />
     </main>
   );
 }

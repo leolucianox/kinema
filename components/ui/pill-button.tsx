@@ -7,15 +7,14 @@ interface PillButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const base =
-  "inline-flex items-center justify-center rounded-full px-8 py-3 text-sm font-medium tracking-body transition-colors duration-300 ease-[cubic-bezier(0.84,0,0.16,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-vermilion focus-visible:ring-offset-2 focus-visible:ring-offset-paper";
+  "inline-flex items-center justify-center rounded-full px-8 py-3 text-sm font-medium tracking-body transition-colors duration-300 ease-[cubic-bezier(0.84,0,0.16,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-spark focus-visible:ring-offset-2 focus-visible:ring-offset-void";
 
 const variants: Record<Variant, string> = {
-  solid: "bg-ink text-paper hover:bg-vermilion",
-  outline: "border border-grid text-ink hover:border-ink",
-  accent: "bg-vermilion text-paper hover:opacity-90",
+  solid: "bg-light text-void hover:bg-spark hover:text-void",
+  outline: "border border-edge text-light hover:border-light",
+  accent: "bg-spark text-void hover:opacity-90",
 };
 
-// Shared pill-shaped button used for CTAs across the site.
 export function PillButton({
   variant = "solid",
   className = "",

@@ -1,0 +1,44 @@
+---
+title: "The case for micro-motion: small moves, outsized impact"
+date: "2025-01-09"
+author: "Maya Kosta"
+excerpt: "Micro-interactions are not decorative. They are the conversational layer of an interface — the moment a product acknowledges you exist."
+---
+
+There is a button on your screen right now. It does something when you click it. Does it do anything when you hover it? Does it give you any signal that a click is coming? Does it confirm that it registered the press?
+
+These are micro-interaction decisions. Most interfaces ignore them. The ones that don't are the ones people describe as "feeling polished" without being able to say why.
+
+## The acknowledgement problem
+
+When you press a physical button, you feel it. The tactile resistance, the click, the return. Digital interfaces have none of this by default. Motion is our substitute for tactile feedback.
+
+A button that reacts to hover says: *I see you.* A button that scales slightly on press says: *I felt that.* A button that transitions to a loading state says: *I'm working on it.* These are not features. They are conversations.
+
+Skipping them is not neutral. It is silence where a response was expected.
+
+## Duration is everything
+
+A micro-interaction that takes 300ms feels laggy. One that takes 50ms feels instant but noticeable. The window for ideal micro-motion is narrow: 80–150ms for immediate feedback, up to 250ms for state transitions.
+
+Beyond 250ms is no longer micro. It is an animation, and it needs to earn its time.
+
+## The 3-state rule
+
+Any interactive element should have at least three states: idle, hover, and active (pressed). Each state should have a distinct visual treatment, and the transitions between them should be animated.
+
+- **Idle → Hover**: a soft signal. Slight scale-up, color shift, shadow. 80–120ms.
+- **Hover → Active**: a decisive movement. Scale down, brightness drop. 50–80ms.
+- **Active → Idle** (after release): a return. Spring back, confirmation. 120–200ms.
+
+## What breaks micro-motion
+
+The most common mistake is applying the same easing to all three transitions. Entering and exiting a state are different actions with different energy. Hover-in should decelerate (arriving). Press should be immediate (a physical action). Release should spring (energy returning).
+
+The second most common mistake is making hover states too dramatic. A hover is a question mark, not an exclamation point. Save the full transformation for the active state.
+
+## The invisible goal
+
+The best micro-motion is the kind users feel but never notice. They won't say "that button has a lovely hover state." They'll say "this app just feels good." That feeling is not an accident. It is the accumulated effect of hundreds of small, intentional decisions about how things respond.
+
+Make those decisions. Make them deliberately.

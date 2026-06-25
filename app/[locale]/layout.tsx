@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Syne, DM_Sans, JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
@@ -12,15 +12,15 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { brand } from "@/lib/brand";
 import "../globals.css";
 
-const fraunces = Fraunces({
+const syne = Syne({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-syne",
   display: "swap",
 });
 
-const grotesk = Space_Grotesk({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-grotesk",
+  variable: "--font-dm-sans",
   display: "swap",
 });
 
@@ -31,13 +31,13 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://grafema.vercel.app"),
+  metadataBase: new URL("https://kinema.studio"),
   title: {
-    default: `${brand.name} — Type Foundry`,
+    default: `${brand.name} — Motion Design Studio`,
     template: `%s — ${brand.name}`,
   },
   description:
-    "Grafema is an independent type foundry. Contemporary typeface families for brands, editorial and screens.",
+    "Kinema is an independent motion design studio. Animation systems for brands, products and digital experiences.",
 };
 
 export function generateStaticParams() {
@@ -61,12 +61,12 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${fraunces.variable} ${grotesk.variable} ${mono.variable}`}
+      className={`${syne.variable} ${dmSans.variable} ${mono.variable}`}
     >
-      <body className="bg-paper font-sans text-ink antialiased">
+      <body className="bg-void font-sans text-light antialiased">
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange
         >

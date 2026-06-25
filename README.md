@@ -1,24 +1,24 @@
-# Grafema — Type Foundry
+# Kinema — Motion Design Studio
 
-Site fictício de uma **fundição tipográfica**, construído como peça de portfólio de frontend / design engineering. A fundação visual nasceu de um clone de landing page e foi transformada num produto próprio, multi-página, com uma feature interativa de destaque.
+Site fictício de um **estúdio de motion design**, construído como peça de portfólio de frontend / design engineering. Feature interativa central: Animation Playground com controles em tempo real via Framer Motion.
 
-> Fictional **type foundry** website, built as a frontend / design-engineering portfolio piece. Originally a landing-page clone, rebranded into an original multi-page product with a signature interactive feature.
+> Fictional **motion design studio** website built as a frontend / design-engineering portfolio piece. Core interactive feature: a live Animation Playground with real-time speed, easing, scale, and color controls.
 
 ## Destaques / Highlights
 
-- **Testador de fontes ao vivo** (peça central): texto editável + controles de tamanho, peso (eixo variável), entreletra, entrelinha, alinhamento, caixa e ligaduras, com glyph grid e waterfall.
-- **Multi-página**: Home, Catálogo, Specimen, Fundição, Diário (Journal) e Em uso.
-- **Dark mode** com tokens via CSS vars (`next-themes`, sem flash).
+- **Animation Playground** (peça central): 6 animações ao vivo com controles de velocidade, easing (linear/expo/spring/bounce), escala, cor e loop.
+- **Motion Kits**: catálogo de 6 kits (Identity Motion, Scroll Reveal, UI Micro, Editorial, Data Viz, Generative) com páginas de detalhe e specimens interativos.
+- **Dark mode** como padrão, com tokens via CSS vars (`next-themes`, sem flash).
 - **i18n PT/EN** com `next-intl` (`app/[locale]`, middleware, troca de idioma preservando a rota).
 - **Diário em MDX** (`next-mdx-remote` + `gray-matter`, frontmatter).
 - **SEO**: Metadata API, OG dinâmico (`next/og`), `sitemap.ts`, `robots.ts`.
-- **Sistema de design** reutilizável: grade de registro, marcas CMYK, serif display + grotesca + mono.
+- **Design System**: palette escura com accent teal (`--spark`), violet (`--volt`), amber (`--glow`). Fonte display: Syne. UI: DM Sans. Specs: JetBrains Mono.
 
 ## Stack
 
-Next.js 14 (App Router) · TypeScript · Tailwind CSS · Framer Motion · next-intl · next-themes · next-mdx-remote · Lucide.
+Next.js 15 (App Router) · React 19 · TypeScript 5 · Tailwind CSS v3 · Framer Motion v11 · next-intl · next-themes · next-mdx-remote · Lucide.
 
-Tipografia (Google Fonts): **Fraunces** (display, variável), **Space Grotesk** (UI), **JetBrains Mono** (specs); famílias do catálogo carregadas sob demanda.
+Tipografia (Google Fonts): **Syne** (display), **DM Sans** (UI), **JetBrains Mono** (specs).
 
 ## Rodando localmente
 
@@ -31,22 +31,22 @@ npm run build    # build de produção (pare o dev server antes no Windows)
 ## Estrutura
 
 ```
-app/[locale]/        layout (fontes + providers) + páginas (home, typefaces, foundry, journal, in-use)
+app/[locale]/             layout (fontes + providers) + páginas (home, kits, studio, work, journal)
 components/
-  type-tester/       testador ao vivo, glyph grid, waterfall
-  sections/          seções da home + grid do catálogo
-  layout/            navbar flutuante, menu overlay, footer
-  ui/                logo, botão, grade, theme-toggle, locale-switch, MDX
-i18n/                routing, request, navigation (next-intl)
-lib/                 brand, typefaces (catálogo), catalog-fonts, journal, motion
-messages/            pt.json, en.json
-content/journal/     posts MDX
+  animation-playground/   playground ao vivo, easing grid, stagger cascade
+  sections/               seções da home + grid de kits
+  layout/                 navbar flutuante, menu overlay, footer
+  ui/                     logo, botão, theme-toggle, locale-switch, MDX
+i18n/                     routing, request, navigation (next-intl)
+lib/                      brand, kits (catálogo), journal, motion
+messages/                 pt.json, en.json
+content/journal/          posts MDX
 ```
 
 ## Deploy
 
-Pronto para a **Vercel** (zero config). Após conectar o repositório, ajuste o domínio em `app/sitemap.ts` / `app/robots.ts`.
+Pronto para a **Vercel** (zero config). Após conectar o repositório, ajuste o domínio em `app/sitemap.ts`, `app/robots.ts` e `metadataBase` em `app/[locale]/layout.tsx`.
 
 ---
 
-*Conteúdo, nomes e tipos do catálogo são fictícios.*
+*Conteúdo, nomes e equipe são fictícios.*

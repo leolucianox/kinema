@@ -1,10 +1,10 @@
 {
   "nav": {
     "home": "Home",
-    "typefaces": "Typefaces",
-    "foundry": "Foundry",
+    "kits": "Kits",
+    "studio": "Studio",
     "journal": "Journal",
-    "inUse": "In use",
+    "work": "Work",
     "tryIt": "Try it",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
@@ -12,77 +12,88 @@
     "language": "Language"
   },
   "home": {
-    "heroKicker": "Independent type foundry",
-    "heroLine1": "Letters",
-    "heroLine2": "with intent.",
-    "heroBody": "We design contemporary typeface families for brands, editorial and screens. A small collection, built to last.",
-    "heroCta": "Browse the type",
-    "manifestoKicker": "Manifesto",
-    "manifestoTitle1": "Every shape carries",
-    "manifestoTitle2": "a decision.",
-    "principle1Label": "Deliberate contrast",
-    "principle1Body": "From hairline to black, every axis is drawn to render at display and text sizes without losing its voice.",
-    "principle2Label": "A system, not a whim",
-    "principle2Body": "Weights, widths and italics speak to each other. A family is a coherent mesh, not loose parts.",
-    "principle3Label": "Made for the screen",
-    "principle3Body": "Careful hinting and metrics so text breathes at any pixel density.",
-    "spotlightKicker": "Spotlight",
-    "spotlightCta": "Open specimen",
-    "tryKicker": "Live tester",
-    "tryTitle": "Type. Tune. Feel it.",
-    "tryBody": "Try any typeface from the collection right in your browser — weight, size, spacing.",
-    "tryPlaceholder": "Type something here",
-    "ctaTitle1": "License the whole",
-    "ctaTitle2": "collection.",
-    "ctaBody": "One license, every family, lifetime updates.",
-    "ctaButton": "Talk to the foundry"
+    "heroKicker": "Motion Design Studio",
+    "heroLine1": "Motion as",
+    "heroLine2": "language.",
+    "heroBody": "We build animation systems that turn interfaces into experiences that feel alive.",
+    "heroCta": "Explore kits",
+
+    "playgroundKicker": "Try it live",
+    "playgroundTitle": "Animation Playground",
+    "playgroundBody": "Adjust speed, easing and scale. Every kit has its own behaviour.",
+
+    "principlesKicker": "Our approach",
+    "principlesTitle1": "Timing is design.",
+    "principlesTitle2": "Feeling is function.",
+    "principle1Label": "Timing carries emotion",
+    "principle1Body": "A 0.15s animation feels snappy. The same animation at 1.2s feels contemplative. It's not a detail — it's meaning.",
+    "principle2Label": "Motion has memory",
+    "principle2Body": "When an element leaves the screen on the left, it should enter from the left. Digital space has physical consistency.",
+    "principle3Label": "Less motion, more impact",
+    "principle3Body": "The best animation is the one you don't consciously notice. The goal is the user's action, not the spectacle.",
+
+    "spotlightKicker": "Featured kit",
+    "spotlightCta": "Explore kit",
+
+    "kitsKicker": "The kits",
+    "kitsTitle": "Six motion families",
+    "kitsSubtitle": "Each kit is a system — presets, curves and behaviours for a specific animation domain.",
+    "kitsView": "View all kits",
+
+    "ctaTitle1": "Let's build something",
+    "ctaTitle2": "that moves.",
+    "ctaBody": "Motion design projects, animation systems and consulting for product teams.",
+    "ctaButton": "Start a project"
   },
-  "typefaces": {
-    "title": "The collection",
-    "subtitle": "Families designed and maintained by Grafema.",
-    "styles": "{count} styles",
-    "view": "View specimen"
+  "kits": {
+    "title": "Motion Kits",
+    "subtitle": "Animation systems for every context. From brand to product.",
+    "presets": "{count} presets",
+    "view": "View kit"
   },
-  "specimen": {
-    "back": "Back to collection",
-    "designer": "Designer",
+  "kit": {
+    "back": "All kits",
+    "director": "Direction",
     "released": "Released",
-    "styles": "Styles",
+    "presets": "Presets",
     "formats": "Formats",
-    "license": "License",
-    "testerTitle": "Live tester",
-    "size": "Size",
-    "weight": "Weight",
-    "tracking": "Tracking",
-    "leading": "Leading",
-    "alignment": "Alignment",
-    "case": "Case",
-    "ligatures": "Ligatures",
-    "glyphsTitle": "Glyph set",
-    "waterfallTitle": "Waterfall",
-    "resetText": "Reset text"
+    "playgroundTitle": "Animation Playground",
+    "speed": "Speed",
+    "easing": "Easing",
+    "scale": "Scale",
+    "loop": "Loop",
+    "color": "Color",
+    "replay": "Replay",
+    "easingGridTitle": "Easing curves",
+    "cascadeTitle": "Stagger cascade",
+    "resetText": "Reset"
   },
-  "foundry": {
-    "title1": "A foundry",
-    "title2": "of the right size.",
-    "body": "Grafema is an independent studio devoted to type design. We work slowly, on a few families a year, obsessed with detail.",
-    "teamTitle": "Who draws"
+  "studio": {
+    "title1": "Motion that",
+    "title2": "matters.",
+    "body": "Kinema is an independent motion design studio. We build animation systems for brands, products and digital platforms.",
+    "teamTitle": "The team"
   },
   "journal": {
     "title": "Journal",
-    "subtitle": "Notes on type, process and the craft.",
-    "readMore": "Read",
+    "subtitle": "Thoughts on motion, timing and design.",
+    "readMore": "Read article",
     "by": "by",
     "backToJournal": "Back to journal"
   },
+  "work": {
+    "title": "Work",
+    "subtitle": "Selected projects in brand motion, product and interactive installations.",
+    "viewProject": "View project"
+  },
   "footer": {
-    "tagline": "Independent type foundry.",
-    "newsletterTitle": "Get new releases",
-    "newsletterPlaceholder": "you@email.com",
+    "tagline": "Motion design that makes a difference.",
+    "newsletterTitle": "Stay in the loop.",
+    "newsletterPlaceholder": "your@email.com",
     "subscribe": "Subscribe",
     "rights": "All rights reserved.",
     "columnsExplore": "Explore",
-    "columnsFoundry": "Foundry",
+    "columnsStudio": "Studio",
     "columnsLegal": "Legal"
   }
 }

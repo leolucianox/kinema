@@ -1,51 +1,51 @@
-import { useTranslations } from "next-intl";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import type { Typeface, Accent } from "@/lib/typefaces";
+import { useTranslations } from "next-intl";
+import type { Kit, Accent } from "@/lib/kits";
 
 const accentText: Record<Accent, string> = {
-  vermilion: "text-vermilion",
-  "proof-blue": "text-proof-blue",
-  "proof-yellow": "text-proof-yellow",
+  spark: "text-spark",
+  volt: "text-volt",
+  glow: "text-glow",
 };
 
-// Reusable grid of typeface cards. Each card previews the family in its own
-// font. Used on the homepage (core faces) and the full catalog page.
-export function CollectionGrid({ items }: { items: Typeface[] }) {
-  const t = useTranslations("typefaces");
+const accentBg: Record<Accent, string> = {
+  spark: "bg-spark/10",
+  volt: "bg-volt/10",
+  glow: "bg-glow/10",
+};
+
+export function CollectionGrid({ items }: { items: Kit[] }) {
+  const t = useTranslations("kits");
 
   return (
-    <div className="grid grid-cols-1 border-t border-grid sm:grid-cols-2 lg:grid-cols-3">
-      {items.map((tf) => (
+    <div className="grid grid-cols-1 border-t border-edge sm:grid-cols-2 lg:grid-cols-3">
+      {items.map((kit) => (
         <Link
-          key={tf.slug}
-          href={`/typefaces/${tf.slug}`}
-          className="group relative flex aspect-[4/5] flex-col justify-between border-b border-r border-grid p-7 transition-colors hover:bg-ink/[0.02]"
+          key={kit.slug}
+          href={`/kits/${kit.slug}`}
+          className="group relative flex aspect-[4/5] flex-col justify-between rounded-none border-b border-r border-edge p-7 transition-colors hover:bg-light/[0.02]"
         >
           <div className="flex items-start justify-between">
-            <span className="font-mono text-xs uppercase tracking-wide text-muted">
-              {tf.category}
+            <span className="font-mono text-xs uppercase tracking-wide text-dim">
+              {kit.category}
             </span>
-            <ArrowUpRight className="h-5 w-5 text-muted opacity-0 transition-opacity group-hover:opacity-100" />
+            <ArrowUpRight className="h-5 w-5 text-dim opacity-0 transition-opacity group-hover:opacity-100" />
           </div>
 
           <div
-            className={`text-[clamp(4rem,9vw,7rem)] leading-none ${accentText[tf.accent]}`}
-            style={{ fontFamily: tf.cssVar }}
+            className={`flex h-24 w-24 items-center justify-center rounded-2xl text-5xl font-bold ${accentBg[kit.accent]} ${accentText[kit.accent]}`}
             aria-hidden="true"
           >
-            {tf.display}
+            {kit.display}
           </div>
 
           <div className="flex items-end justify-between">
-            <h3
-              className="font-display text-2xl tracking-tightest text-ink"
-              style={{ fontFamily: tf.cssVar }}
-            >
-              {tf.name}
+            <h3 className="font-display text-2xl font-bold tracking-tightest text-light">
+              {kit.name}
             </h3>
-            <span className="font-mono text-xs text-muted">
-              {t("styles", { count: tf.styles })}
+            <span className="font-mono text-xs text-dim">
+              {t("presets", { count: kit.presets })}
             </span>
           </div>
         </Link>

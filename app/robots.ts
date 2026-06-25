@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE = "https://grafema.vercel.app";
+const BASE = "https://kinema.studio";
 
 export default function robots(): MetadataRoute.Robots {
   return {

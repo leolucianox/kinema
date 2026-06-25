@@ -3,9 +3,8 @@ import { brand } from "@/lib/brand";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = `${brand.name} — Type Foundry`;
+export const alt = `${brand.name} — Motion Design Studio`;
 
-// Dynamic social card: brand wordmark + registration marks on paper.
 export default async function OpengraphImage() {
   return new ImageResponse(
     (
@@ -16,32 +15,33 @@ export default async function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#FCFCFA",
-          color: "#141414",
+          background: "#07070f",
+          color: "#e8e8f0",
           padding: "80px",
-          fontFamily: "Georgia, serif",
+          fontFamily: "Arial, sans-serif",
         }}
       >
-        <div style={{ display: "flex", gap: "12px" }}>
-          <div style={{ width: 36, height: 36, background: "#F23005" }} />
-          <div style={{ width: 36, height: 36, background: "#1F4FFF" }} />
-          <div style={{ width: 36, height: 36, background: "#FFD400" }} />
+        <div style={{ display: "flex", gap: "10px" }}>
+          <div style={{ width: 12, height: 12, borderRadius: "50%", background: "#00e5a0" }} />
+          <div style={{ fontFamily: "monospace", fontSize: 14, color: "#6060a0", letterSpacing: "0.2em" }}>
+            MOTION DESIGN STUDIO
+          </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 200, lineHeight: 1, letterSpacing: "-0.04em", display: "flex" }}>
+          <div style={{ fontSize: 160, fontWeight: 900, lineHeight: 0.9, letterSpacing: "-0.04em", display: "flex" }}>
             {brand.name}
-            <span style={{ color: "#F23005" }}>.</span>
+            <span style={{ color: "#00e5a0" }}>.</span>
           </div>
           <div
             style={{
-              marginTop: 24,
-              fontSize: 34,
+              marginTop: 28,
+              fontSize: 28,
               fontFamily: "monospace",
-              color: "#6B6B66",
+              color: "#6060a0",
             }}
           >
-            {`Independent type foundry — ${brand.domain}`}
+            {`Motion as language — ${brand.domain}`}
           </div>
         </div>
       </div>

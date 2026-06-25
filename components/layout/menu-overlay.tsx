@@ -13,21 +13,18 @@ import { useMenu } from "./menu-context";
 
 const links = [
   { href: "/", key: "home" },
-  { href: "/typefaces", key: "typefaces" },
-  { href: "/foundry", key: "foundry" },
+  { href: "/kits", key: "kits" },
+  { href: "/studio", key: "studio" },
   { href: "/journal", key: "journal" },
-  { href: "/in-use", key: "inUse" },
+  { href: "/work", key: "work" },
 ] as const;
 
-// Global navigation overlay: blurred backdrop + focused left panel with large
-// editorial links. The floating brand card (z-60) stays above it as the header.
 export function MenuOverlay() {
   const { open, setOpen } = useMenu();
   const t = useTranslations("nav");
   const tHome = useTranslations("home");
   const pathname = usePathname();
 
-  // Close whenever the route changes.
   useEffect(() => {
     setOpen(false);
   }, [pathname, setOpen]);
@@ -44,22 +41,22 @@ export function MenuOverlay() {
           <motion.button
             aria-label={t("closeMenu")}
             onClick={() => setOpen(false)}
-            className="absolute inset-0 bg-paper/40 backdrop-blur-md"
+            className="absolute inset-0 bg-void/70 backdrop-blur-md"
             variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
             transition={{ duration: 0.4 }}
           />
 
           <motion.nav
-            className="absolute left-0 top-0 flex h-full w-full max-w-[460px] flex-col justify-between border-r border-grid bg-paper pt-[104px]"
+            className="absolute left-0 top-0 flex h-full w-full max-w-[460px] flex-col justify-between rounded-r-2xl border-r border-edge bg-surface pt-[104px]"
             variants={{ hidden: { x: "-100%" }, visible: { x: 0 } }}
             transition={{ duration: 0.7, ease: EASE_EXPO }}
           >
-            <ul className="border-t border-grid">
+            <ul className="border-t border-edge">
               {links.map((link) => (
-                <li key={link.href} className="border-b border-grid">
+                <li key={link.href} className="border-b border-edge">
                   <Link
                     href={link.href}
-                    className="group flex items-center justify-between px-global py-6 font-display text-3xl tracking-tightest text-ink transition-colors hover:text-vermilion"
+                    className="group flex items-center justify-between px-global py-6 font-display text-3xl font-bold tracking-tightest text-light transition-colors hover:text-spark"
                   >
                     {t(link.key)}
                     <ArrowUpRight className="h-6 w-6 -translate-x-2 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
@@ -68,12 +65,12 @@ export function MenuOverlay() {
               ))}
             </ul>
 
-            <div className="border-t border-grid px-global py-8">
+            <div className="border-t border-edge px-global py-8">
               <div className="mb-6 flex items-center gap-2 md:hidden">
                 <LocaleSwitch />
                 <ThemeToggle />
               </div>
-              <p className="mb-4 max-w-xs text-sm tracking-body text-muted">
+              <p className="mb-4 max-w-xs text-sm tracking-body text-dim">
                 {tHome("ctaBody")}
               </p>
               <PillButton variant="accent" className="w-full">

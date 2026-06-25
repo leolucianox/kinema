@@ -3,31 +3,36 @@
 @tailwind utilities;
 
 /* ----------------------------------------------------------------------------
-   Grafema — design tokens
-   Palette derived from offset-printing / registration marks (CMYK proofing).
-   Tokens are CSS vars so the .dark class can swap ink<->paper cleanly.
+   Kinema — design tokens
+   Palette: dark-first motion studio. Primary accent is electric teal (spark).
+   Secondary: violet (volt). Tertiary: amber (glow).
 ---------------------------------------------------------------------------- */
 :root {
-  --paper: #fcfcfa;
-  --ink: #141414;
-  --grid: #dbdbd6;
-  --muted: #6b6b66;
+  --void: #07070f;
+  --light: #e8e8f0;
+  --surface: #0d0d1a;
+  --edge: #1e1e30;
+  --dim: #6060a0;
 
-  --vermilion: #f23005; /* signature accent — registration red */
-  --proof-blue: #1f4fff;
-  --proof-yellow: #ffd400;
+  --spark: #00e5a0;
+  --volt: #a855f7;
+  --glow: #f59e0b;
+
+  --radius: 0.75rem;
+  --radius-sm: 0.5rem;
 
   --nav-height: 69px;
-  --size-padding-global: 1.875rem; /* 30px */
-  --size-gap: 1.25rem; /* 20px */
+  --size-padding-global: 1.875rem;
+  --size-gap: 1.25rem;
 }
 
-.dark {
-  --paper: #141414;
-  --ink: #fcfcfa;
-  --grid: #2a2a2a;
-  --muted: #9a9a93;
-  /* accents stay identical — they pop on both grounds */
+/* Light mode — inverted, cooler */
+.light {
+  --void: #f4f4f8;
+  --light: #0d0d1a;
+  --surface: #ffffff;
+  --edge: #d4d4e0;
+  --dim: #9090b0;
 }
 
 html {
@@ -35,8 +40,8 @@ html {
 }
 
 body {
-  background-color: var(--paper);
-  color: var(--ink);
+  background-color: var(--void);
+  color: var(--light);
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: -0.01em;
@@ -45,13 +50,12 @@ body {
 }
 
 ::selection {
-  background-color: var(--vermilion);
-  color: var(--paper);
+  background-color: var(--spark);
+  color: var(--void);
 }
 
-/* Display serif is set tight + high-contrast, as a foundry hero should be */
 .font-display {
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 @media (prefers-reduced-motion: reduce) {
